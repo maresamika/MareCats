@@ -1,0 +1,15 @@
+Package: MareCats
+Title: MareCats: Care for your Cat
+Version: 0.0.0.9000
+Authors@R: 
+    person("Maresa", "Behr", , "maresa_behr@t-online.de", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The two functions help you to care for your cat. One tells you how many treats you should give it. 
+    The second one helps you to improve your cats mood by giving Suggestion for enrichment. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    lubridate
