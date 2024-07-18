@@ -1,6 +1,6 @@
 # File: R/marecats_functions.R
 # Load necessary library
-library(lubridate)
+#library(lubridate) thats in the dependencies now
 
 #' Kitty Treats Calculation
 #'
