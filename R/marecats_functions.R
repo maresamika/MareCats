@@ -45,7 +45,7 @@ kitty_treats <- function(last_fed) {
 #' and suggests enrichment activities to improve the mood.
 #'
 #' @param weather_condition A character string representing the current weather.
-#' Valid values include "rainy", "hot", "snowy".
+#' Valid values include "rainy", "hot", "snowy", "cold", "sunny", "warm", "mild", "nice".
 #' @param current_mood An integer of the current mood of the cat, ranging from 1 (low mood) to 10 (high mood).
 #' @return A message summarizing the cat's mood and suggesting enrichment activities to potentially improve the mood.
 #' @examples
@@ -53,10 +53,13 @@ kitty_treats <- function(last_fed) {
 #' @export
 kitty_mood_enrichment <- function(weather_condition, current_mood) {
   # Adjust mood based on weather conditions
-  if (weather_condition %in% c("rainy", "hot", "snowy")) {
-    current_mood <- max(current_mood - 2, 1)  # Decrease mood by 2 for bad weather, ensure it doesn't go below 1
+  if (weather_condition %in% c("rainy", "hot", "snowy", "cold")) {
+    current_mood <- max(current_mood - 1, 1)  # Decrease mood by 1 for bad weather, ensure it doesn't go below 1
+  } else if (weather_condition %in% c("sunny", "warm", "mild", "nice")) {
+    current_mood <- min(current_mood + 1, 10)  # Increase mood by 1 for good weather, ensure it doesn't go above 10
   }
-
+  return(current_mood)
+}
   # Enrichment suggestions based on current mood
   enrichment_suggestions <- if (current_mood <= 3) {
     c(
