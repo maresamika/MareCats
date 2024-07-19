@@ -58,8 +58,7 @@ kitty_mood_enrichment <- function(weather_condition, current_mood) {
   } else if (weather_condition %in% c("sunny", "warm", "mild", "nice")) {
     current_mood <- min(current_mood + 1, 10)  # Increase mood by 1 for good weather, ensure it doesn't go above 10
   }
-  return(current_mood)
-}
+
   # Enrichment suggestions based on current mood
   enrichment_suggestions <- if (current_mood <= 3) {
     c(

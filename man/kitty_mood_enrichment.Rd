@@ -8,7 +8,7 @@ kitty_mood_enrichment(weather_condition, current_mood)
 }
 \arguments{
 \item{weather_condition}{A character string representing the current weather.
-Valid values include "rainy", "hot", "snowy".}
+Valid values include "rainy", "hot", "snowy", "cold", "sunny", "warm", "mild", "nice".}
 
 \item{current_mood}{An integer of the current mood of the cat, ranging from 1 (low mood) to 10 (high mood).}
 }
